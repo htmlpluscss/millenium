@@ -5,36 +5,36 @@
 				<div class="pull-left">
 
 					<a href="/" class="logo footer__logo"></a>
-					<p class="footer__p"></p>
+					<p class="footer__p">2012-2016 Все права защищены</p>
 
 				</div>
 
-				<div class="footer__menu">
+				<div class="footer__menu pull-left">
 
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="">Для инвестора</a></li>
+						<li><a href="">Под залог недвижимости</a></li>
+						<li><a href="">Просто займ</a></li>
 					</ul>
 
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="">Как получить?</a></li>
+						<li><a href="">Как погасить?</a></li>
+						<li><a href="">Контакты</a></li>
 					</ul>
 
 				</div>
 
-				<div class="footer__contact pull-right">
+				<div class="pull-right">
 
 					<div class="phone-and-callback">
 
-						<a class="phone-and-callback__tel" href="tel:"></a>
-						<a class="phone-and-callback__link"></a>
+						<a class="phone-and-callback__tel" href="tel:8800442100">8 (800) 44-21-00</a>
+						<a class="phone-and-callback__link">Заказать звонок</a>
 
 					</div>
 
-					<ul class="social-group">
+					<ul class="social-group clr">
 						<li class="social-group-item social-group-item--vk"><a href="/" target="_blank" rel="nofollow"></a></li>
 						<li class="social-group-item social-group-item--fb"><a href="/" target="_blank" rel="nofollow"></a></li>
 						<li class="social-group-item social-group-item--gp"><a href="/" target="_blank" rel="nofollow"></a></li>
@@ -45,7 +45,7 @@
 
 			</div>
 
-			<p class="copyright"></p>
+			<p class="copyright">КПК «МФ Гупп» ИНН 123456789</p>
 
 		</footer>
 

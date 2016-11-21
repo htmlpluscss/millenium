@@ -68,63 +68,6 @@ http://htmlpluscss.ru
 
 // datepicker
 
-	$(".datepicker").each(function(){
-
-		var t = $(this)
-
-		if(t.hasClass('datepicker--interaction')){
-
-			var upcomingEvents = $('.upcoming-events__item');
-			var upcomingEventsDate = [];
-			upcomingEvents.find('.upcoming-events__date').each(function(){
-				upcomingEventsDate.push($(this).attr('datetime'));
-			});
-
-			t.datepicker({
-				firstDay: 1,
-				dateFormat: 'yy-mm-dd',
-				showOtherMonths: true,
-				dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-				beforeShowDay: function(date){
-					var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-					return [ upcomingEventsDate.indexOf(string) != -1 ]
-				},
-				onChangeMonthYear: function(year, month, inst) {
-					console.log(year)
-					console.log(month)
-				},
-				onSelect: function(dateText, inst) {
-					var nextItem = upcomingEventsDate.indexOf(dateText);
-					upcomingEvents.removeClass('slide-show__item--active');
-					nextItem = upcomingEvents.eq(nextItem).addClass('slide-show__item--active');
-					nextItem.parent().css('left',-nextItem.position().left);
-				}
-			});
-
-		}
-
-		if(t.hasClass('datepicker--links')){
-
-			var upcomingEventsDate = ['2016-10-13','2016-11-12','2016-12-02'];
-
-			t.datepicker({
-				firstDay: 1,
-				dateFormat: 'yy-mm-dd',
-				showOtherMonths: true,
-				dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-				beforeShowDay: function(date){
-					var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-					return [ upcomingEventsDate.indexOf(string) != -1 ]
-				},
-				onSelect: function(dateText, inst) {
-					alert(dateText);
-				}
-			});
-
-		};
-
-	});
-
 
 // slideShow
 
@@ -132,168 +75,6 @@ http://htmlpluscss.ru
 
 		var setSlider = function(){
 
-			var slider = $(this),
-				list = slider.find('.slide-show__item'),
-				size = list.length,
-				navNext = $('<a class="slide-show__next">'),
-				navPrev = $('<a class="slide-show__prev">'),
-				abscissa = slider.hasClass('slide-show--abscissa'),
-				transition = false,
-				interactionCalendar = slider.hasClass('slide-show--calendar');
-
-			navNext.add(navPrev).on('click',function(event,nextItemIndex){
-				if(transition) {
-					return true;
-				}
-				transition = true;
-
-				var clickRight = $(this).hasClass('slide-show__next');
-				var activeItem = list.filter('.slide-show__item--active');
-				var nextItem = clickRight ? activeItem.next() : activeItem.prev();
-
-				if(abscissa) {
-
-					if(interactionCalendar){
-
-						if(nextItem.length == 0){
-							nextItem = clickRight ? list.first() : list.last();
-						}
-
-						var date = nextItem.find('.upcoming-events__date').attr('datetime');
-						$("#datepicker").datepicker("setDate", date);
-
-					}
-					if(!clickRight && nextItem.length == 0){
-						jump(size);
-						setTimeout(function(){
-							transition = false;
-							navPrev.trigger('click');
-						},1);
-						return true;
-					}
-					nextActive(nextItem);
-					ul.removeClass('slide-show__ul--jump').css('left',-nextItem.position().left).one(cssAnimation('transition'), function(){
-						if(clickRight && nextItem.index() > size){
-							jump(nextItem.index() - size);
-						}
-						transition = false;
-					});
-
-				} else {
-
-					if(clickRight){
-						slider.addClass('slide-show--right');
-						if(nextItem.length == 0){
-							nextItem = list.first();
-						}
-					}
-					else {
-						slider.addClass('slide-show--left');
-						if(nextItem.length == 0){
-							nextItem = list.last();
-						}
-					}
-					if(nextItemIndex !== undefined)
-						nextItem = list.eq(nextItemIndex);
-					nextItem.addClass('slide-show__item--next').one(cssAnimation('animation'), function(){
-						nextActive(nextItem);
-						list.removeClass('slide-show__item--next');
-						slider.removeClass('slide-show--left slide-show--right');
-						transition = false;
-					});
-					navDisk.removeClass('slide-show__nav--current').eq(nextItem.index()).addClass('slide-show__nav--current');
-
-				}
-			}).hover(function(){
-				slider.addClass('notsel');
-			},function(){
-				slider.removeClass('notsel');
-			});
-
-			if(abscissa) {
-
-// проверяю кол-во элементов
-				if(parseInt(slider.attr('data-item-show')) >= size){
-					slider.addClass('slide-show--disabled');
-					transition = true;
-				}
-				else {
-
-					slider.removeClass('slide-show--disabled');
-
-					var ul = slider.find('.slide-show__ul');
-					if(slider.hasClass('slide-show--carousel')){
-						ul.append(list.clone());
-					}
-					list = ul.children();
-
-					if (list.filter('.slide-show__item--active').length>0) {
-						ul.css('left',-list.filter('.slide-show__item--active').position().left);
-					}
-					else {
-						list.first().addClass('slide-show__item--active');
-					}
-
-				}
-
-			} else {
-
-				var nav = $('<div class="slide-show__nav">');
-				for(var i = 0; i < size; i++){
-					nav.append('<a></a>');
-				}
-				var navDisk = nav.children();
-
-				navDisk.on('click',function(){
-					if($(this).hasClass('slide-show__nav--current')) {
-						return true;
-					}
-					var index = $(this).index();
-					var btnClick = index > list.filter('.slide-show__item--active').index() ? navNext : navPrev;
-					btnClick.trigger('click',index);
-				});
-
-				list.filter('.slide-show__item--active').length > 0 ?
-					navDisk.eq(list.filter('.slide-show__item--active').index()).addClass('slide-show__nav--current') :
-					navDisk.first().trigger('click');
-
-				touchX(slider,navNext,navPrev);
-				slider.append(nav);
-
-			}
-
-			slider.append(navNext,navPrev);
-
-			function nextActive(n){
-				n.addClass('slide-show__item--active').siblings().removeClass('slide-show__item--active');
-			}
-
-			function jump(indexNext){
-				n = list.eq(indexNext);
-				l = n.position().left;
-				ul.addClass('slide-show__ul--jump').css('left',-l);
-				nextActive(n);
-			}
-
-			function timer(time){
-				var intervalID;
-				function on_timer(){
-					intervalID = setInterval(function(){
-						if(!$('#header').hasClass('header--menu-show')){
-							navNext.triggerHandler('click');
-						}
-					},time * 1000);
-				}
-				slider.hover(function(){
-					clearInterval(intervalID);
-				},function(){
-					on_timer();
-				});
-				on_timer();
-			}
-			if(slider.is('[data-timer]')){
-				timer(parseInt(slider.attr('data-timer')));
-			}
 
 		}
 
@@ -304,11 +85,6 @@ http://htmlpluscss.ru
 	$('.slide-show').slideShow();
 
 
-// slider-preview
-	$('.slider-preview__preview img').on('click',function(){
-		var src = $(this).attr('src');
-		$('.slider-preview__box').css('background-image','url('+src+')');
-	});
 
 // touch X
 	function touchX(b,l,r){
@@ -339,11 +115,6 @@ http://htmlpluscss.ru
 		});
 	}
 
-// ready
-	$window.ready(function(){
-		$window.trigger('resize');
-		$('.frontend').addClass('frontend--ready');
-	});
 
 // alert_up
 	$.fn.alertUp = function(){
@@ -380,13 +151,6 @@ http://htmlpluscss.ru
 	};
 
 	$('.btn-alert_up').alertUp();
-
-// img-hover-filter
-	$('.event-hover__item').hover(function(){
-		$(this).closest('.event-hover').addClass('event-hover--hover');
-	},function(){
-		$(this).closest('.event-hover').removeClass('event-hover--hover');
-	});
 
 // select
 
@@ -434,23 +198,6 @@ http://htmlpluscss.ru
 
 	$('select').mySelect();
 
-// accordion
-	$('.accordion__toggle').on('click', function(event) {
-		$(this).hasClass('accordion__toggle--active') ?
-			$(this).removeClass('accordion__toggle--active').next().stop().slideUp() :
-			$(this).addClass('accordion__toggle--active').next().stop().slideDown();
-	});
-
-// fancy
-	if($('.fancy').length>0){
-
-		$.getScript('/js/jquery.fancybox.pack.js', function(){
-			$('.fancy').fancybox({
-				padding : 50
-			});
-		});
-
-	}
 
 
 })(jQuery);

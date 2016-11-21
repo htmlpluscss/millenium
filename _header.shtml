@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<title><!--#echo var="title" --></title>
 	<meta charset="utf-8">
@@ -20,11 +20,11 @@
 			<nav class="menu-top">
 
 				<ul class="center clr">
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li class="menu-top__btn"><a></a></li>
+					<li><a href="">О нас</a></li>
+					<li><a href="">Новости</a></li>
+					<li><a href="">Вопросы и ответы</a></li>
+					<li><a href="">Контакты</a></li>
+					<li class="menu-top__btn"><a class="btn"><i class="ico ico--lk"></i>Личный кабинет</a></li>
 				</ul>
 
 			</nav>
@@ -35,24 +35,23 @@
 
 				<nav class="menu-header pull-left">
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="">Продукты</a></li>
+						<li><a href="">Как получить</a></li>
+						<li><a href="">Как погасить</a></li>
 					</ul>
 				</nav>
 
-				<div class="pull-right">
+				<div class="header__contact pull-right">
 
 					<div class="phone-and-callback">
 
-						<a class="phone-and-callback__tel" href="tel:"></a>
-						<a class="phone-and-callback__link"></a>
+						<a class="phone-and-callback__tel" href="tel:8800442100">8 (800) 44-21-00</a>
+						<a class="phone-and-callback__link">Заказать звонок</a>
 
 					</div>
 
 				</div>
 
 			</div>
-
 
 		</header>

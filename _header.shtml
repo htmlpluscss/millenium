@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title><!--#echo var="title" --></title>
+	<meta charset="utf-8">
+	<link href="/css/default.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/media.css" rel="stylesheet">
+	<link rel="apple-touch-icon-precomposed" href="/favicon.png">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+
+	<div class="frontend <!--#echo var=page -->">
+
+		<header id="header" class="header">
+
+			<nav class="menu-top">
+
+				<ul class="center clr">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li class="menu-top__btn"><a></a></li>
+				</ul>
+
+			</nav>
+
+			<div class="center clr">
+
+				<a class="logo pull-left" href="/"></a>
+
+				<nav class="menu-header pull-left">
+					<ul>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+				</nav>
+
+				<div class="pull-right">
+
+					<div class="phone-and-callback">
+
+						<a class="phone-and-callback__tel" href="tel:"></a>
+						<a class="phone-and-callback__link"></a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</header>

@@ -1,0 +1,62 @@
+		<footer id="footer" class="footer">
+
+			<div class="center clr">
+
+				<div class="pull-left">
+
+					<a href="/" class="logo footer__logo"></a>
+					<p class="footer__p"></p>
+
+				</div>
+
+				<div class="footer__menu">
+
+					<ul>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+
+					<ul>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+
+				</div>
+
+				<div class="footer__contact pull-right">
+
+					<div class="phone-and-callback">
+
+						<a class="phone-and-callback__tel" href="tel:"></a>
+						<a class="phone-and-callback__link"></a>
+
+					</div>
+
+					<ul class="social-group">
+						<li class="social-group-item social-group-item--vk"><a href="/" target="_blank" rel="nofollow"></a></li>
+						<li class="social-group-item social-group-item--fb"><a href="/" target="_blank" rel="nofollow"></a></li>
+						<li class="social-group-item social-group-item--gp"><a href="/" target="_blank" rel="nofollow"></a></li>
+						<li class="social-group-item social-group-item--tw"><a href="/" target="_blank" rel="nofollow"></a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<p class="copyright"></p>
+
+		</footer>
+
+<!--#include file="_alert_up.shtml"-->
+
+	</div>
+
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script defer src="/js/jquery.min.js"><\/script>')</script>
+	<script defer src="/js/jquery-ui.min.js"></script>
+	<script defer src="/js/js.js"></script>
+
+</body>
+</html>

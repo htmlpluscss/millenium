@@ -1,0 +1,13 @@
+		<div class="alert_up alert_up--flexbox alert_up--hide">
+
+			<div class="alert_up__window alert_up__window--addnew">
+
+				<div class="alert_up__box">
+
+					<a class="alert_up__close ico ico--close"></a>
+
+				</div>
+
+			</div>
+
+		</div>

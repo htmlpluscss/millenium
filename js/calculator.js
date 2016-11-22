@@ -12,7 +12,7 @@ http://htmlpluscss.ru
 
 	var btn = $('.calcul__radio-btn-toggle'), // кнопки переключения калькулятора
 		btnActive, // активная кнопка
-		btnPeriod, // срок начисления процентов (день или год, займ или инвестор соответственно)
+		btnPeriod, // срок начисления процентов (фиксированный или продукты)
 
 		// слайдер суммы
 		summ = $('#slider-summ'),
@@ -20,9 +20,6 @@ http://htmlpluscss.ru
 		summMax,
 		summStep,
 		summValue,
-		summPlus = summ.closest('.calcul__box').find('.calcul__plus'),
-		summMinus = summ.closest('.calcul__box').find('.calcul__minus'),
-		summResult = summ.find('.calcul__result'),
 
 		// слайдер срока
 		date = $('#slider-date'),
@@ -30,9 +27,6 @@ http://htmlpluscss.ru
 		dateMax,
 		dateStep,
 		dateValue,
-		datePlus = date.closest('.calcul__box').find('.calcul__plus'),
-		dateMinus = date.closest('.calcul__box').find('.calcul__minus'),
-		dateResult = date.find('.calcul__result'),
 
 		// сумма займа
 		summSet = $("#summ-set"),
@@ -47,17 +41,12 @@ http://htmlpluscss.ru
 		// дата возврата
 		dateSetTextFormat = $(".date-set-format"),
 
+		// дата суффикс
+		dateSufix = dateSet.siblings(".calcul__input-suf"),
+		dateSufixArr = dateSufix.attr("data-declension").split(','),
+
 		// % ставка годовых
-		rateSet = $("#rate-set"),
 		stavka,
-
-		// % ставка плавающая
-		stavkaArr,
-
-		// продукты
-		productBtns = $('.calcul__product'),
-		// продукты (дата и процент)
-		setDateStavka = $('.calcul__set-radio'),
 
 		// cтавка вывод
 		stavkaText = $('.calcul__stavka'),
@@ -75,10 +64,6 @@ http://htmlpluscss.ru
 		minSummDate,
 		// произведение максимального срока и суммы
 		maxSummDate,
-		// блок изменяющий высоту от дохода
-		diffHeight = $('.calcul__diff-height'),
-		diffHeightMin = diffHeight.height(),
-		diffHeightMax = diffHeight.closest('.calcul__diff-height-max').height(),
 
 		resizeTimeoutId;
 
@@ -95,9 +80,8 @@ http://htmlpluscss.ru
 		dateValue = parseInt(dateValue);
 		rateValue = parseFloat(stavka);
 
-		summSet.val(summValue);
+		summSet.val(sepNumber(summValue));
 		dateSet.val(dateValue);
-		rateSet.val(rateValue);
 
 		// расчет переплаты
 		diffValue = stavka * summValue * dateValue / 100;
@@ -107,30 +91,15 @@ http://htmlpluscss.ru
 			diffValue /= 12;
 		}
 
-		// расчет переплаты инвестора
-		if(btnPeriod == '365') {
-/*
-			for(var i = 0; i < stavkaArr.length; i++){
-				var v = stavkaArr[i].split('|');
-				if(dateValue >= parseInt(v[0])){
-					stavka = parseInt(v[1]);
-					stavkaText.text(stavka);
-					stavka /= 12;
-				}
-				else{
-					break;
-				}
-			}
-
-*/		};
-
-
 		// вывели срок займа
 		dateSetText.text(dateValue);
+		date.children('.ui-slider-handle').text(dateValue);
+
 		// вывели переплату
 		returnDiff.text(sepNumber(diffValue));
 		// вывели сумму займа
 		summSetText.text(sepNumber(summValue));
+		summ.children('.ui-slider-handle').text(sepNumber(summValue));
 		// вывели сумму возврата
 		summSetTotal.text(sepNumber(summValue+diffValue));
 		// вывели в месяц
@@ -141,12 +110,8 @@ http://htmlpluscss.ru
 		refundDate.setDate(refundDate.getDate() + dateValue);
 		dateSetTextFormat.text(('0' + refundDate.getDate()).slice(-2) + '.' + ('0' + (refundDate.getMonth() + 1)).slice(-2) + '.' + refundDate.getFullYear());
 
-		// позиционирование плавающих блоков
-		summResult.css('margin-left',-summResult.outerWidth()/2);
-		dateResult.css('margin-left',-dateResult.outerWidth()/2);
-
-		// высота блока зависищая от дохода
-	 	diffHeight.height((diffHeightMax - diffHeightMin) * (summValue * dateValue - minSummDate) / (maxSummDate - minSummDate) + diffHeightMin);
+		// суффикс
+		dateSufix.text(declension(dateValue, dateSufixArr))
 
 	}
 
@@ -177,15 +142,6 @@ http://htmlpluscss.ru
 		return parseInt(n.replace(/\s+/g,''));
 	}
 
-	// продукты
-	setDateStavka.on('change', function(event,start) {
-		var v = $(this).val().split('|');
-		dateValue = parseInt(v[0]);
-		stavka = parseInt(v[1]);
-		if(start === undefined){
-			result();
-		}
-	});
 
 	// выбор типа калькулятора
 	btn.on('change',function(){
@@ -199,20 +155,6 @@ http://htmlpluscss.ru
 		resizeTimeoutId = setTimeout(function(){
 			setSlider(false);
 		}, 1000);
-	});
-
-	// + - один пункт
-	summPlus.on('click',function(){
-		summSet.val(summValue + summStep).trigger('blur');
-	});
-	summMinus.on('click',function(){
-		summSet.val(summValue - summStep).trigger('blur');
-	});
-	datePlus.on('click',function(){
-		dateSet.val(dateValue + dateStep).trigger('blur');
-	});
-	dateMinus.on('click',function(){
-		dateSet.val(dateValue - dateStep).trigger('blur');
 	});
 
 	function setSlider(resetSlider){
@@ -241,19 +183,8 @@ http://htmlpluscss.ru
 				stavkaText.text(stavka.replace('.',','));
 				stavka = parseFloat(stavka);
 			}
-			else if(btnPeriod == "365") {
-//				stavkaArr = stavka.split(',');
-			}
 			else if(btnPeriod == "product") {
-				productBtns.addClass('hide').filter('.'+stavka).removeClass('hide').find(':checked').trigger('change','start');
-			}
 
-			// смена валют
-			var currencyText = btnActive.attr('data-currency-text');
-			var currencySymbol = btnActive.attr('data-currency-symbol');
-			if(currencyText !== undefined){
-				$('.calcul__currency-text').text(currencyText);
-				$('.calcul__currency-symbol').text(currencySymbol);
 			}
 
 		}
@@ -273,9 +204,6 @@ http://htmlpluscss.ru
 				max: summMax,
 				step: summStep,
 				value: summValue,
-				create: function(){
-					summ.find('.ui-slider-handle').html(summResult);
-				},
 				slide: function(event,ui) {
 					summValue = ui.value;
 					result();
@@ -288,9 +216,6 @@ http://htmlpluscss.ru
 				max: dateMax,
 				step: dateStep,
 				value: dateValue,
-				create: function(){
-					date.find('.ui-slider-handle').html(dateResult);
-				},
 				slide: function(event,ui) {
 					dateValue = ui.value;
 					result();

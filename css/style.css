@@ -1,10 +1,13 @@
 body {
-	background: url(1.jpg) center 0;
+//	background: url(1.jpg) center 0;
 }
 /* header
 -----------------------------------------------------------------------------*/
 .header {
 	z-index: 9;
+}
+.menu-top {
+	background: #1a1d1f
 }
 .menu-top li {
 	float: left;
@@ -33,9 +36,8 @@ body {
 	height: 85px;
 	width: 200px;
 	margin-right: 30px;
-	outline:1px solid red;
 	display: block;
-	background: url(/images/sprite.svg) -34px -17px;
+	background: url(/images/sprite.svg) -20px 0;
 }
 
 .menu-header {
@@ -78,8 +80,7 @@ a.phone-and-callback__tel {
 	top: 2px;
 	left: 2px;
 	content: '';
-	outline:1px solid red;
-	background: url(/images/sprite.svg) -10px -10px;
+	background: url(/images/sprite.svg) -18px -107px;
 }
 a.phone-and-callback__link {
 	font-size: 13px;
@@ -92,82 +93,130 @@ a.phone-and-callback__link {
 
 /* home-slider
 -----------------------------------------------------------------------------*/
-.calcul-box {
-	padding: 87px 0;
-	color: #fff
+.calcul-home {
+	padding: 115px 0 60px;
+	color: #fff;
 }
-.calcul-box .h1{
-	padding: 145px 0 14px;
+.calcul-home__p{
+	font-size: 29px;
+	line-height: 36px;
+	padding: 15px 0;
+	font-weight: 300;
 }
 .calcul {
-	width: 300px;
+	position: relative;
+	margin-top: 46px;
+}
+.calcul__bg {
+	padding: 20px;
+	background: rgba(26,29,31,.8);
 }
 .calcul__box {
-	color: #f00;
-	padding: 12px 20px;
-	background: #fff;
-	margin-bottom: 20px;
+	width: 440px;
 }
 .calcul .btn{
-	display: block;
-	box-shadow: 0 3px 0 #000;
+	bottom: 16px;
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	right: 16px;
+	width: 224px;
 }
 .calcul__h3 {
+	color: #fff;
+	font-size: 16px;
+	line-height: 33px;
+	font-weight: 400;
+	padding-top: 4px;
 }
-.calcul__box .input {
-	width: 111px;
-	text-align: center;
+.calcul__input-box {
+	width: 107px;
+	height: 33px;
+	line-height: 33px;
+	color: #fff;
+	font-size: 16px;
+	margin-top: 4px;
+	position: relative;
+	background: rgba(255,255,255,.2);
+}
+.calcul__input-box .input {
+	height: 33px;
+	padding: 0 12px;
+	border: 0;
+	color: #fff;
+	font-size: 16px;
+	background: none;
+}
+.calcul__input-suf {
+	font-size: 14px;
+	top: 0;
+	right: 10px;
+	opacity: .7;
+	position: absolute;
 }
 .calcul__slider-box {
-	height: 32px;
+	height: 28px;
 	position: relative;
-	margin: 0 34px;
 	clear: both;
+	padding-top: 17px;
 }
 .calcul__slider {
-	height: 3px;
-	background: #fff;
+	height: 4px;
+	margin: 0 50px;
 	position: relative;
+}
+.calcul__slider:before {
+	position: absolute;
+	top: 0;
+	left: -50px;
+	right: -50px;
+	bottom: 0;
+	content: '';
+	background: #fff;
 }
 .ui-slider-range {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -50px;
 	bottom: 0;
-	background: #ff8a00;
+	background: #bc1212;
 }
 .ui-slider-handle {
 	position: absolute;
-	width: 30px;
-	height: 30px;
-	top: -14px;
+	width: 102px;
+	height: 42px;
+	top: -20px;
 	z-index: 1;
-	margin-left: -15px;
-	background: #ff8a00;
-	border-radius: 50%;
-	border: 10px solid #fff;
+	font-size: 16px;
+	line-height: 42px;
+	color: #000;
+	text-align: center;
+	margin-left: -51px;
+	background: url(/images/sprite.svg) -18px -107px;
 	cursor: pointer;
 }
 .calcul__range {
-	color: red;
+	color: #888;
 	font-size: 12px;
-	line-height: 20px;
+	line-height: 22px;
 }
 .calcul__foot {
-	padding: 12px 0;
+	padding: 30px;
+	background: #fff
 }
 .calcul__foot li{
-	margin: 12px 0;
-	background: #333;
-	border-radius: 5px;
-	padding: 0 5px;
-	font-size: 12px;
+	float: left;
+	color: #515253;
+	font-size: 13px;
 	line-height: 20px;
+	min-width: 220px;
+	padding-right: 10px;
 }
 .calcul__foot-value {
-	position: absolute;
-	top: 0;
-	right: 5px;
+	color: #000;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 0 4px;
 }
 
 
@@ -188,6 +237,7 @@ a.phone-and-callback__link {
 	font-weight: 500;
 	display: inline-block;
 	vertical-align: top;
+	color: #515253;
 }
 .step3-block li:nth-child(n+2):after{
 	position: absolute;
@@ -204,8 +254,16 @@ a.phone-and-callback__link {
 	display: block;
 	margin: 26px auto;
 	content: '';
-	background: url(/images/sprite.svg) -px -px;
-	outline:1px solid red;
+	background: url(/images/sprite.svg);
+}
+.step3-block li:nth-child(1):before{
+	background-position: -10px -172px
+}
+.step3-block li:nth-child(2):before{
+	background-position: -145px -172px
+}
+.step3-block li:nth-child(3):before{
+	background-position: -282px -172px
 }
 
 /* reviews-block
@@ -221,30 +279,29 @@ a.phone-and-callback__link {
 .reviews-block__item {
 	width: 460px;
 	height: 234px;
-	border-radius: 6px;
 	background: #fff;
 	position: relative;
-	color: #000;
-	font-size: 14px;
-	line-height: 25px;
-	font-weight: 300;
 	padding: 34px 30px 34px 138px;
 }
 .reviews-block__item img{
 	position: absolute;
-	width: 82px;
-	height: 82px;
+	width: 81px;
+	height: 81px;
 	top: 76px;
 	left: 26px;
-	content: '';
 	border-radius: 50%;
 }
 .reviews-block__name {
-	color: #1a1d1f;
 	font-size: 16px;
 	line-height: 22px;
-	padding-bottom: 6px;
 	font-weight: 500;
+}
+.reviews-block__item p{
+	color: #515253;
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: 300;
+	padding: 6px 0;
 }
 
 /* news-block
@@ -270,7 +327,6 @@ a.phone-and-callback__link {
 .news-block__link {
 	width: 300px;
 	display: block;
-	border-radius: 6px;
 	background: #f5f5f5;
 	position: relative;
 	padding: 22px 16px 26px 84px;
@@ -456,8 +512,10 @@ a.phone-and-callback__link {
 .footer__logo {
 	height: 54px;
 	margin: 0 60px 8px 0;
+	background-position: -20px -16px
 }
 .footer__p {
+	color: #515253;
 	font-size: 12px;
 	line-height: 16px;
 }
@@ -492,34 +550,16 @@ a.phone-and-callback__link {
 	display: block;
 }
 .social-group-item--vk {
-	background-position: -410px -142px
+	background-position: -278px -18px
 }
 .social-group-item--fb {
-	background-position: -36px -140px;
+	background-position: -318px -18px
 }
 .social-group-item--gp {
-	background-position: -535px -140px;
+	background-position: -358px -18px
 }
 .social-group-item--tw {
-	background-position: -285px -140px;
-}
-.social-group-item--ig {
-	background-position: -161px -140px;
-}
-.social-group-item--vk:hover {
-	background-position: -410px -182px
-}
-.social-group-item--fb:hover {
-	background-position: -36px -180px;
-}
-.social-group-item--gp:hover {
-	background-position: -535px -180px;
-}
-.social-group-item--tw:hover {
-	background-position: -285px -180px;
-}
-.social-group-item--ig:hover {
-	background-position: -161px -180px;
+	background-position: -398px -18px
 }
 .copyright {
 	text-align: center;

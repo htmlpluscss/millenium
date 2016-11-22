@@ -4,66 +4,74 @@
 
 		<main class="main">
 
-			<article class="calcul-box">
+			<article class="calcul-home img-cover" data-img="img/calcul-home.jpg">
 
 				<div class="center clr">
 
-					<div class="pull-left">
+					<h1 class="h1">Удобные онлайн займы</h1>
+					<p class="calcul-home__p">Деньги на Вашем счету уже<br>через 15 минут</p>
 
-						<h1 class="h1">Удобные онлайн займы</h1>
-						<p class="h3">Деньги на Вашем счету уже<br>через 15 минут</p>
-
-					</div>
-
-					<form class="calcul pull-right">
-
-						<div class="calcul__box">
-
-							<h4 class="calcul__h3 pull-left">Сумма, ₽</h4>
-							<input class="input pull-right summ-set">
-							<div class="calcul__slider-box">
-								<div class="calcul__slider" id="slider-summ"></div>
-							</div>
-							<div class="calcul__range clr">
-								<span class="calcul__summ-min pull-left""></span>
-								<span class="calcul__summ-max pull-right"></span>
-							</div>
-
-							<h4 class="calcul__h3 pull-left">Срок, мес.</h4>
-							<input class="input pull-right date-set">
-							<div class="calcul__slider-box">
-								<div class="calcul__slider" id="slider-date"></div>
-							</div>
-							<div class="calcul__range clr">
-								<span class="calcul__date-min pull-left">1</span>
-								<span class="calcul__date-max pull-right">30</span>
-							</div>
-
-							<ul class="calcul__foot">
-								<li>Вы возвращаете: <span class="calcul__foot-value summ-return">5 000</span></li>
-								<li>До (включительно): <span class="calcul__foot-value date-set-format">21.12.16</span></li>
-								<li>Процент в день: <span class="calcul__foot-value calcul__foot-value--procent calcul__stavka">12</span></li>
-							</ul>
-
-						</div>
-
-						<label class="btn btn--big">Получить займ<input type="submit"></label>
+					<form class="calcul">
 
 <!--#set var="calculator" value = "1" -->
 
-						<input class="hide" type="radio" name="currency" value="rub" checked="checked"
+						<input class="calcul__radio-btn-toggle hide" type="radio" checked="checked"
 							data-summ-step="1000"
-							data-summ-min="5000"
+							data-summ-min="1000"
 							data-summ-max="30000"
-							data-summ-value="22000"
+							data-summ-value="12000"
 							data-date-step="1"
 							data-date-min="1"
 							data-date-max="30"
-							data-date-value="6"
-							data-stavka="3.6"
+							data-date-value="18"
+							data-stavka="12"
 							data-period="1">
-						<input id="summ-set" type="hidden" name="summ">
-						<input id="date-set" type="hidden" name="date">
+
+						<div class="calcul__bg clr">
+
+							<div class="calcul__box pull-left">
+
+								<h4 class="calcul__h3 pull-left">Сумма займа</h4>
+								<span class="calcul__input-box pull-right">
+									<input type="tel" class="input" id="summ-set" value="12 000">
+									<span class="calcul__input-suf">₽</span>
+								</span>
+								<div class="calcul__slider-box">
+									<div class="calcul__slider" id="slider-summ"></div>
+								</div>
+								<div class="calcul__range clr">
+									<span class="calcul__summ-min pull-left">1 000</span>
+									<span class="calcul__summ-max pull-right">30 000</span>
+								</div>
+
+							</div>
+
+							<div class="calcul__box pull-right">
+
+								<h4 class="calcul__h3 pull-left">Срок займа</h4>
+								<span class="calcul__input-box pull-right">
+									<input type="tel" class="input date-set" id="date-set" value="18">
+									<span class="calcul__input-suf" data-declension="день,дня,дней">дней</span>
+								</span>
+								<div class="calcul__slider-box">
+									<div class="calcul__slider" id="slider-date"></div>
+								</div>
+								<div class="calcul__range clr">
+									<span class="calcul__date-min pull-left">1</span>
+									<span class="calcul__date-max pull-right">30</span>
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="calcul__foot clr">
+							<li>Вы возвращаете: <span class="calcul__foot-value"><span class="summ-return">15 120</span> руб.</span></li>
+							<li>До (включительно): <span class="calcul__foot-value date-set-format">21.12.16</span></li>
+							<li>Процент в день: <span class="calcul__foot-value"><span class="calcul__stavka">12</span>%</span></li>
+						</ul>
+
+						<label class="btn btn--big">Получить займ<input type="submit"></label>
 
 					</form>
 
@@ -83,49 +91,53 @@
 
 			</article>
 
-			<section class="reviews-block slide-show">
+			<section class="reviews-block img-cover" data-img="img/reviews-block.jpg">
 
-				<h2 class="h2">Отзывы о нас</h2>
+				<div class="center slide-show">
 
-				<div class="reviews-block__list center slide-show__box">
+					<h2 class="h2">Отзывы о нас</h2>
 
-					<div class="reviews-block__group slide-show__item">
-						<article class="reviews-block__item pull-left slide-show__item-box">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-						<article class="reviews-block__item pull-right slide-show__item-box">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-					</div>
+					<div class="reviews-block__list center slide-show__box">
 
-					<div class="reviews-block__group slide-show__item">
-						<article class="reviews-block__item pull-left slide-show__item-box">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-						<article class="reviews-block__item pull-right slide-show__item-box">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-					</div>
+						<div class="reviews-block__group slide-show__item">
+							<article class="reviews-block__item pull-left slide-show__item-box">
+								<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+								<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+								<img src="img/reviews-block.png" alt="">
+							</article>
+							<article class="reviews-block__item pull-right slide-show__item-box">
+								<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+								<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+								<img src="img/reviews-block.png" alt="">
+							</article>
+						</div>
 
-					<div class="reviews-block__group slide-show__item">
-						<article class="reviews-block__item pull-left slide-show__item-box">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-						<article class="reviews-block__item pull-right slide-show__item-box">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
+						<div class="reviews-block__group slide-show__item">
+							<article class="reviews-block__item pull-left slide-show__item-box">
+								<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+								<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+								<img src="img/reviews-block.png" alt="">
+							</article>
+							<article class="reviews-block__item pull-right slide-show__item-box">
+								<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+								<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+								<img src="img/reviews-block.png" alt="">
+							</article>
+						</div>
+
+						<div class="reviews-block__group slide-show__item">
+							<article class="reviews-block__item pull-left slide-show__item-box">
+								<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+								<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+								<img src="img/reviews-block.png" alt="">
+							</article>
+							<article class="reviews-block__item pull-right slide-show__item-box">
+								<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+								<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+								<img src="img/reviews-block.png" alt="">
+							</article>
+						</div>
+
 					</div>
 
 				</div>
@@ -164,19 +176,19 @@
 				<form class="subscribe">
 					<h3 class="subscribe__title h3">Подписывайтесь на последние новости</h3>
 					<input placeholder="Укажите Ваш e-mail" class="subscribe__input input">
-					<label class="subscribe__btn btn btn--radius">Подписаться<input type="submit"></label>
+					<label class="subscribe__btn btn">Подписаться<input type="submit"></label>
 				</form>
 
 			</section>
 
-			<aside class="img-cover flexbox flexbox--center flexbox--align-center">
+			<aside class="img-cover img-cover--400 img-cover--text flexbox flexbox--center flexbox--column flexbox--align-center">
 
 				<div class="center">
 
 					<h3 class="h2">У Вас есть вопросы? Свяжитесь с нами!</h3>
 					<a class="btn btn--white btn--big btn--radius btn-alert_up" data-alert-up="callback">Задайте свой вопрос специалисту</a>
 					<p>или попробуйте найти ответ в разделе <br>«<a href="faq.html">Вопросы и ответы</a>»</p>
-					<img src="img/img-cover__1.png" alt="">
+					<img src="img/img-cover__1.jpg" alt="">
 
 				</div>
 

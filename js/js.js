@@ -177,7 +177,7 @@ http://htmlpluscss.ru
 			var a_up = windows.filter('.alert_up__window--'+selector);
 			body.addClass('hidden');
 			$('.frontend').css('margin-left',-getScrollBarWidth());
-			box.removeClass('alert_up--hide').toggleClass('alert_up--flexbox',windowHeight > a_up.outerHeight());
+			box.removeClass('alert_up--hide').toggleClass('flexbox',windowHeight > a_up.outerHeight());
 			windows.not(a_up).removeClass('alert_up__window--active');
 			a_up.addClass('alert_up__window--active').focus();
 		}

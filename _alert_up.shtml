@@ -1,4 +1,4 @@
-		<div class="alert_up alert_up--flexbox alert_up--hide">
+		<div class="alert_up alert_up--hide flexbox flexbox--center flexbox--column flexbox--align-center">
 
 			<div class="alert_up__window alert_up__window--callback">
 

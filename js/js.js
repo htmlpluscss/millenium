@@ -66,15 +66,57 @@ http://htmlpluscss.ru
 		$('#header').toggleClass('header--menu-show');
 	});
 
-// datepicker
-
-
 // slideShow
 
 	$.fn.slideShow = function(){
 
 		var setSlider = function(){
 
+			var slider = $(this),
+				list = slider.find('.slide-show__item'),
+				navNext = $('<a class="slide-show__next">'),
+				navPrev = $('<a class="slide-show__prev">'),
+				nav = $('<div class="slide-show__nav">');
+			for(var i = 0; i < list.length; i++)
+				nav.append('<a></a>');
+			nav.children().on('click',function(){
+				if($(this).hasClass('slide-show__nav--current')) return;
+				var index = $(this).index();
+				var btnClick = index > list.filter('.slide-show__item--active').index() ?
+					slider.find('.slide-show__next'):
+					slider.find('.slide-show__prev');
+				btnClick.trigger('click',index);
+			});
+
+			navNext.add(navPrev).on('click',function(event,nextItem){
+				if(list.filter('.slide-show__item--next').length>0) return;
+				var next, t = $(this);
+				var active = list.filter('.slide-show__item--active');
+				if(t.hasClass('slide-show__next')){
+					slider.addClass('slide-show--right');
+					next = active.next().length>0 ? active.next() : list.first();
+				}
+				else {
+					slider.addClass('slide-show--left');
+					next = active.prev().length>0 ? active.prev() : list.last();
+				}
+				if(nextItem!==undefined)
+					next = list.eq(nextItem);
+				next.addClass('slide-show__item--next').one(cssAnimation('animation'), function(){
+					next.addClass('slide-show__item--active');
+					list.removeClass('slide-show__item--next');
+					active.removeClass('slide-show__item--active');
+					slider.removeClass('slide-show--left slide-show--right');
+				});
+				nav.children().removeClass('slide-show__nav--current').eq(next.index()).addClass('slide-show__nav--current');
+			});
+
+			slider.append(nav,navNext,navPrev);
+			list.filter('.slide-show__item--active').length>0 ?
+				nav.children().eq(list.filter('.slide-show__item--active').index()).addClass('slide-show__nav--current'):
+				nav.children().first().trigger('click');
+
+			touchX(slider,navNext,navPrev);
 
 		}
 
@@ -82,9 +124,8 @@ http://htmlpluscss.ru
 
 	};
 
+// slideShow
 	$('.slide-show').slideShow();
-
-
 
 // touch X
 	function touchX(b,l,r){
@@ -151,54 +192,6 @@ http://htmlpluscss.ru
 	};
 
 	$('.btn-alert_up').alertUp();
-
-// select
-
-	$.fn.mySelect = function(){
-
-		var select = function(){
-
-			var select = $(this);
-			select.wrap('<div class="select notsel">');
-			var select_box = select.parent();
-			var c = '<span class="select__value"><span class="select__text"></span></span><div class="select__box"><ul>';
-			select.children('option').each(function() {
-				if($(this).val()!='none')
-					c += '<li class="select__li" data-value="' + $(this).val() + '">' + $(this).text() + '</li>';
-			});
-			c += '</ul></div>';
-			select.before(c);
-
-			var box_ul = select.siblings('.select__box');
-			var visible = select.siblings('.select__value').children();
-
-			select_box.on('click', function() {
-				select_box.hasClass('select--focus') ? box_ul.hide() : box_ul.show();
-				select_box.toggleClass('select--focus');
-			});
-
-			box_ul.on('click','.select__li', function() {
-				select.val($(this).attr('data-value')).trigger('change');
-			});
-			select.on('change',function(){
-				var o = select.children(':selected');
-				visible.text(o.text());
-				o.attr('value')=='none' ? select_box.addClass('select--default') : select_box.removeClass('select--default');
-			}).trigger('change');
-
-		}
-
-		$(document).on('click', function(event) {
-			$('.select--focus').not($(event.target).closest('.select')).removeClass('select--focus').find('.select__box').hide();
-		});
-
-		return this.each(select);
-
-	};
-
-	$('select').mySelect();
-
-
 
 })(jQuery);
 

@@ -6,52 +6,64 @@
 
 			<article class="calcul-box">
 
-				<div class="center">
+				<div class="center clr">
 
-					<h1 class="h1">Удобные онлайн займы</h1>
-					<p>Деньги на Вашем счету уже<br>через 15 минут</p>
+					<div class="pull-left">
 
-					<form class="calcul">
+						<h1 class="h1">Удобные онлайн займы</h1>
+						<p class="h3">Деньги на Вашем счету уже<br>через 15 минут</p>
+
+					</div>
+
+					<form class="calcul pull-right">
 
 						<div class="calcul__box">
 
 							<h4 class="calcul__h3 pull-left">Сумма, ₽</h4>
-							<input class="input pull-right">
-							<div class="calcul__slider">
-								<input type="hidden" class="calcul__summ"
-									data-value="5000"
-									data-min="10000"
-									data-max="60000"
-									data-step="1000">
+							<input class="input pull-right summ-set">
+							<div class="calcul__slider-box">
+								<div class="calcul__slider" id="slider-summ"></div>
 							</div>
-							<div class="clr">
-								<span class="calcul__min pull-left""></span>
-								<span class="calcul__max pull-right"></span>
+							<div class="calcul__range clr">
+								<span class="calcul__summ-min pull-left""></span>
+								<span class="calcul__summ-max pull-right"></span>
 							</div>
 
 							<h4 class="calcul__h3 pull-left">Срок, мес.</h4>
-							<input class="input pull-right">
-							<div class="calcul__slider">
-								<input type="hidden" class="calcul__date"
-									data-value="12"
-									data-min="10000"
-									data-max="60000"
-									data-step="1">
+							<input class="input pull-right date-set">
+							<div class="calcul__slider-box">
+								<div class="calcul__slider" id="slider-date"></div>
 							</div>
-							<div class="clr">
-								<span class="calcul__min pull-left""></span>
-								<span class="calcul__max pull-right"></span>
+							<div class="calcul__range clr">
+								<span class="calcul__date-min pull-left">1</span>
+								<span class="calcul__date-max pull-right">30</span>
 							</div>
 
 							<ul class="calcul__foot">
-								<li>Вы возвращаете: <span class="calcul__foot-value">5 000</span></li>
-								<li>До (включительно): <span class="calcul__foot-value">21.12.16</span></li>
-								<li>Процент в день: <span class="calcul__foot-value">12%</span></li>
+								<li>Вы возвращаете: <span class="calcul__foot-value summ-return">5 000</span></li>
+								<li>До (включительно): <span class="calcul__foot-value date-set-format">21.12.16</span></li>
+								<li>Процент в день: <span class="calcul__foot-value calcul__foot-value--procent calcul__stavka">12</span></li>
 							</ul>
 
 						</div>
 
 						<label class="btn btn--big">Получить займ<input type="submit"></label>
+
+<!--#set var="calculator" value = "1" -->
+
+						<input class="hide" type="radio" name="currency" value="rub" checked="checked"
+							data-summ-step="1000"
+							data-summ-min="5000"
+							data-summ-max="30000"
+							data-summ-value="22000"
+							data-date-step="1"
+							data-date-min="1"
+							data-date-max="30"
+							data-date-value="6"
+							data-stavka="3.6"
+							data-period="1">
+						<input id="summ-set" type="hidden" name="summ">
+						<input id="date-set" type="hidden" name="date">
 
 					</form>
 
@@ -71,47 +83,51 @@
 
 			</article>
 
-			<section class="reviews-block">
+			<section class="reviews-block slide-show">
 
 				<h2 class="h2">Отзывы о нас</h2>
 
-				<div class="reviews-block__list center">
-					<div class="reviews-block__group clr">
-						<article class="reviews-block__item pull-left">
+				<div class="reviews-block__list center slide-show__box">
+
+					<div class="reviews-block__group slide-show__item">
+						<article class="reviews-block__item pull-left slide-show__item-box">
 							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
 							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
 							<img src="img/reviews-block.png" alt="">
 						</article>
-						<article class="reviews-block__item pull-right">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-					</div>
-					<div class="reviews-block__group clr">
-						<article class="reviews-block__item pull-left">
-							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
-							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
-							<img src="img/reviews-block.png" alt="">
-						</article>
-						<article class="reviews-block__item pull-right">
+						<article class="reviews-block__item pull-right slide-show__item-box">
 							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
 							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
 							<img src="img/reviews-block.png" alt="">
 						</article>
 					</div>
-					<div class="reviews-block__group clr">
-						<article class="reviews-block__item pull-left">
+
+					<div class="reviews-block__group slide-show__item">
+						<article class="reviews-block__item pull-left slide-show__item-box">
 							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
 							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
 							<img src="img/reviews-block.png" alt="">
 						</article>
-						<article class="reviews-block__item pull-right">
+						<article class="reviews-block__item pull-right slide-show__item-box">
 							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
 							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
 							<img src="img/reviews-block.png" alt="">
 						</article>
 					</div>
+
+					<div class="reviews-block__group slide-show__item">
+						<article class="reviews-block__item pull-left slide-show__item-box">
+							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+							<img src="img/reviews-block.png" alt="">
+						</article>
+						<article class="reviews-block__item pull-right slide-show__item-box">
+							<h4 class="reviews-block__name">Николай Дроздов, г. Москва</h4>
+							<p>Для получения микрозайма вам нужно нажать кнопку «Оформить заявление» и заполнить анкетные данные. В течение 10-15 минут решение по вашему заявлению будет уже принято.</p>
+							<img src="img/reviews-block.png" alt="">
+						</article>
+					</div>
+
 				</div>
 
 			</section>
@@ -158,8 +174,9 @@
 				<div class="center">
 
 					<h3 class="h2">У Вас есть вопросы? Свяжитесь с нами!</h3>
-					<a class="btn btn--white btn--big btn--radius">Задайте свой вопрос специалисту</a>
+					<a class="btn btn--white btn--big btn--radius btn-alert_up" data-alert-up="callback">Задайте свой вопрос специалисту</a>
 					<p>или попробуйте найти ответ в разделе <br>«<a href="faq.html">Вопросы и ответы</a>»</p>
+					<img src="img/img-cover__1.png" alt="">
 
 				</div>
 

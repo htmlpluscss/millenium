@@ -1,12 +1,15 @@
 		<div class="alert_up alert_up--flexbox alert_up--hide">
 
-			<div class="alert_up__window alert_up__window--addnew">
+			<div class="alert_up__window alert_up__window--callback">
 
-				<div class="alert_up__box">
-
+				<form class="alert_up__box">
+					<p class="h2">Обратный звонок</p>
+					<input class="input" placeholder="Ваше имя">
+					<input class="input" placeholder="Ваш e-mail" type="email">
+					<input class="input" placeholder="Телефон" type="tel">
+					<label class="btn">Отправить<input type="submit"></label>
 					<a class="alert_up__close ico ico--close"></a>
-
-				</div>
+				</form>
 
 			</div>
 

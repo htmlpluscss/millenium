@@ -30,7 +30,7 @@
 					<div class="phone-and-callback">
 
 						<a class="phone-and-callback__tel" href="tel:8800442100">8 (800) 44-21-00</a>
-						<a class="phone-and-callback__link">Заказать звонок</a>
+						<a class="phone-and-callback__link btn-alert_up" data-alert-up="callback">Заказать звонок</a>
 
 					</div>
 
@@ -53,10 +53,15 @@
 
 	</div>
 
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script defer src="/js/jquery.min.js"><\/script>')</script>
-	<script defer src="/js/jquery-ui.min.js"></script>
-	<script defer src="/js/js.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+	<script src="/js/js.js"></script>
+
+<!--#if expr="$calculator = 1" -->
+	<script src="/js/jquery-ui.min.js"></script>
+	<script src="/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="/js/calculator.js"></script>
+<!--#endif-->
 
 </body>
 </html>

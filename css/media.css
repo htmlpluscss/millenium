@@ -2,13 +2,13 @@
 .visible-xs {
 	display: none;
 }
-.visible-lg {
-	display: block;
+body{
+	background: url(1.png) center 0;
 }
 
 /* 960
 ----------------------------------------*/
-@media only screen and (max-width:960px){
+@media only screen and (max-width:959px){
 
 	.hidden-sm {
 		display: none !important;
@@ -17,7 +17,7 @@
 		display: block;
 	}
 	.frontend .center--sm {
-		max-width: 750px;
+		max-width: 720px;
 	}
 	.sm-pull-left {
 		float: left;
@@ -80,13 +80,17 @@
 
 /* 768
 ----------------------------------------*/
-@media only screen and (max-width:767px){
+@media only screen and (max-width:749px){
 
 .hidden-xs {
 	display: none !important;
 }
 .visible-xs {
 	display: block;
+}
+.frontend .center--sm {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .frontend .center--xs{
 	max-width: 320px;

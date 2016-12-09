@@ -45,7 +45,12 @@
 
 			</div>
 
-			<p class="copyright">КПК «МФ Гупп» ИНН 123456789</p>
+			<div class="copyright">
+				<div class="center clr">
+					<p class="pull-left">КПК «МФ Гупп» ИНН 123456789</p>
+					<a class="footer__developer pull-right" rel="nofollow" target="_blank" href="http://ru.sptnk.co/"></a>
+				</div>
+			</div>
 
 		</footer>
 

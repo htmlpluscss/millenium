@@ -14,6 +14,8 @@ http://htmlpluscss.ru
 		btnActive, // активная кнопка
 		btnPeriod, // срок начисления процентов (фиксированный или продукты)
 
+		slideActive = false, // двигается ползунок
+
 		// слайдер суммы
 		summ = $('#slider-summ'),
 		summMin,
@@ -204,9 +206,24 @@ http://htmlpluscss.ru
 				max: summMax,
 				step: summStep,
 				value: summValue,
+				create: function(event,ui) {
+					summ.children('.ui-slider-handle').on('click',function(e){
+						if(!slideActive){
+							var stepChange = e.pageX - $(this).offset().left > $(this).width() / 2 ?
+							summStep : -summStep;
+							summSet.val(summValue + stepChange).trigger('blur');
+						}
+					});
+				},
 				slide: function(event,ui) {
+					slideActive = true;
 					summValue = ui.value;
 					result();
+				},
+				stop: function(){
+					setTimeout(function(){
+						slideActive = false;
+					},100);
 				}
 			});
 
@@ -216,9 +233,24 @@ http://htmlpluscss.ru
 				max: dateMax,
 				step: dateStep,
 				value: dateValue,
+				create: function(event,ui) {
+					date.children('.ui-slider-handle').on('click',function(e){
+						if(!slideActive){
+							var stepChange = e.pageX - $(this).offset().left > $(this).width() / 2 ?
+							dateStep : -dateStep;
+							dateSet.val(dateValue + stepChange).trigger('blur');
+						}
+					});
+				},
 				slide: function(event,ui) {
+					slideActive = true;
 					dateValue = ui.value;
 					result();
+				},
+				stop: function(){
+					setTimeout(function(){
+						slideActive = false;
+					},100);
 				}
 			});
 
@@ -262,6 +294,24 @@ http://htmlpluscss.ru
 			}
 			result();
 		}
+	});
+
+	// + - один пункт
+	$('body').on('click',function(e){
+		console.log( e.pageX-l < $(this).width())
+		if(!$(e.target).hasClass('ui-slider-handle')){
+			return true;
+		}
+		var l = $(this).offset().left;
+		if( e.pageX-l < $(this).width() ) {
+			summSet.val(summValue - summStep).trigger('blur');
+		}
+		else {
+			summSet.val(summValue + summStep).trigger('blur');
+		}
+
+//				summSet.val(summValue - summStep).trigger('blur');
+//				dateSet.val(dateValue + dateStep).trigger('blur');
 	});
 
 })(jQuery);

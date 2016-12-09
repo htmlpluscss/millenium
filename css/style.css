@@ -1,6 +1,3 @@
-body {
-//	background: url(1.jpg) center 0;
-}
 /* header
 -----------------------------------------------------------------------------*/
 .header {
@@ -192,8 +189,24 @@ a.phone-and-callback__link {
 	color: #000;
 	text-align: center;
 	margin-left: -51px;
-	background: url(/images/sprite.svg) -18px -107px;
+	background: #fff;
+	border-radius: 21px;
+	box-shadow: 0 0 1px rgba(0,0,0.2);
 	cursor: pointer;
+}
+.ui-slider-handle:after,
+.ui-slider-handle:before {
+	position: absolute;
+	width: 16px;
+	height: 20px;
+	top: 12px;
+	left: 8px;
+	content: '';
+	background: url(/images/sprite.svg) -155px -105px
+}
+.ui-slider-handle:before {
+	left: 76px;
+	background-position: -175px -105px
 }
 .calcul__range {
 	color: #888;
@@ -562,11 +575,16 @@ a.phone-and-callback__link {
 	background-position: -398px -18px
 }
 .copyright {
-	text-align: center;
 	line-height: 16px;
 	font-size: 13px;
-	padding: 13px 0 16px;
+	padding: 13px 0;
 	color: #fff;
 	margin-top: 46px;
 	background: #1a1d1f
+}
+.footer__developer {
+	width: 144px;
+	height: 20px;
+	margin-right: 32px;
+	background: url(/images/sprite.svg) -231px -108px;
 }

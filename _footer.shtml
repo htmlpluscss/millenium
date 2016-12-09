@@ -2,14 +2,14 @@
 
 			<div class="center clr center--sm">
 
-				<div class="pull-left">
+				<div class="pull-left xs-float-none">
 
 					<a href="/" class="logo footer__logo"></a>
 					<p class="footer__p">2012-2016 Все права защищены</p>
 
 				</div>
 
-				<div class="footer__menu pull-left">
+				<div class="footer__menu pull-left xs-float-none">
 
 					<ul>
 						<li><a href="">Для инвестора</a></li>
@@ -25,7 +25,7 @@
 
 				</div>
 
-				<div class="pull-right">
+				<div class="pull-right xs-float-none">
 
 					<div class="phone-and-callback">
 
@@ -47,8 +47,8 @@
 
 			<div class="copyright">
 				<div class="center clr">
-					<p class="pull-left">КПК «МФ Гупп» ИНН 123456789</p>
-					<a class="footer__developer pull-right" rel="nofollow" target="_blank" href="http://ru.sptnk.co/"></a>
+					<p class="pull-left xs-float-none">КПК «МФ Гупп» ИНН 123456789</p>
+					<a class="footer__developer pull-right xs-float-none" rel="nofollow" target="_blank" href="http://ru.sptnk.co/"></a>
 				</div>
 			</div>
 

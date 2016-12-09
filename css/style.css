@@ -39,7 +39,7 @@
 
 .menu-header {
 	margin: 24px 20px 22px;
-	padding: 0 40px 0 22px;
+	padding: 0 22px;
 	height: 38px;
 	border-left: 1px solid #efefef;
 	border-right: 1px solid #efefef;
@@ -52,7 +52,7 @@
 	font-size: 16px;
 	line-height: 20px;
 	display: block;
-	padding: 8px 21px;
+	padding: 8px 12px;
 }
 
 .header__contact {
@@ -69,13 +69,14 @@ a.phone-and-callback__tel {
 	line-height: 24px;
 	font-weight: 500;
 	letter-spacing: -.2px;
+	position: relative;
 }
 .phone-and-callback__tel:before {
 	position: absolute;
 	width: 22px;
 	height: 36px;
 	top: 2px;
-	left: 2px;
+	left: -28px;
 	content: '';
 	background: url(/images/sprite.svg) -18px -107px;
 }
@@ -174,8 +175,16 @@ a.phone-and-callback__link {
 .ui-slider-range {
 	position: absolute;
 	top: 0;
+	left: 0;
+	bottom: 0;
+}
+.ui-slider-range:before {
+	position: absolute;
+	top: 0;
 	left: -50px;
 	bottom: 0;
+	right: -10px;
+	content: '';
 	background: #bc1212;
 }
 .ui-slider-handle {

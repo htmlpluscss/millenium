@@ -27,43 +27,111 @@ body{
 	}
 
 
+	.header {
+		background: #fff;
+	}
+	.header .logo {
+		margin-left: 24px;
+	}
+	.footer__logo {
+		margin-right: 35px;
+	}
+	.footer__menu {
+		padding: 0 46px 0 42px;
+		overflow: hidden;
+		height: auto;
+	}
+	.footer__menu ul {
+		float: none;
+		padding: 0;
+	}
+	.footer__menu ul:first-child {
+		padding-bottom: 2px;
+	}
+	.copyright {
+		margin-top: 42px;
+		padding: 13px;
+	}
+
+	.header--menu-show {
+		box-shadow: 0 0 6px rgba(0,0,0,.26);
+	}
+	.header--menu-show .menu-mobile {
+		display: block;
+	}
+	.menu-mobile .phone-and-callback {
+		padding: 21px 15px 41px 41px;
+		box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+		background: #f7f7f7;
+	}
+	.menu-mobile__menu {
+		position: relative;
+		top: -20px;
+		padding: 26px 0 6px;
+		background: #fff
+	}
+	.menu-mobile__menu-sep:before {
+		height: 1px;
+		content: '';
+		margin: 12px 16px;
+		display: block;
+		background: #f7f7f7;
+	}
+	.menu-mobile__menu a{
+		display: block;
+		font-size: 16px;
+		line-height: 24px;
+		color: #515253;
+		padding: 8px 13px
+	}
+	.phone-and-callback__lk {
+		width: 32px;
+		height: 32px;
+		margin-top: 6px;
+		position: relative;
+		background-color: #bc1212;
+	}
+	.phone-and-callback__lk .ico{
+		top: 4px;
+		left: 3px;
+	}
+
 .menu-mobile-toggle {
-	width: 42px;
-	height: 42px;
-	margin: 13px 15px;
+	width: 68px;
+	height: 68px;
+	margin: 8px 6px;
 	position: relative;
-	background: #ff8500;
 }
 .menu-mobile-toggle__line {
 	position: absolute;
-	width: 22px;
-	height: 2px;
+	width: 32px;
+	height: 3px;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	background-color: #fff;
+	background-color: #bc1212;
 	-webkit-transition: background-color .4s ease;
 	transition: background-color .4s ease;
 }
 .menu-mobile-toggle__line:after,
 .menu-mobile-toggle__line:before {
 	position: absolute;
-	top: -7px;
+	top: -10px;
 	left: 0;
 	right: 0;
-	height: 2px;
+	height: 3px;
 	content: '';
-	background-color: #fff;
+	background: #bc1212;
 	-webkit-transition: all .4s ease;
 	transition: all .4s ease;
 }
 .menu-mobile-toggle__line:before {
-	top: 7px;
+	top: 10px;
 }
 .header--menu-show .menu-mobile-toggle__line {
-	background: transparent;
+	background-color: transparent;
 }
 .header--menu-show .menu-mobile-toggle__line:before {
 	top: 0;
@@ -75,6 +143,97 @@ body{
 	-webkit-transform: rotate(-225deg);
 	transform: rotate(-225deg);
 }
+
+	.calcul-home {
+		padding: 110px 0 26px;
+	}
+	.calcul {
+		margin: 35px auto 0;
+		width: 650px;
+	}
+	.calcul__bg {
+		padding: 6px 10px 3px;
+	}
+	.calcul__box {
+		width: 300px;
+	}
+	.ui-slider-handle {
+		height: 37px;
+		line-height: 37px;
+		margin-left: -51px;
+		top: -17px;
+		width: 98px;
+		margin-left: -48px;
+	}
+	.ui-slider-handle::after, .ui-slider-handle::before {
+		top: 9px;
+	}
+	.calcul__foot {
+		padding: 15px 19px 19px;
+	}
+	.calcul__foot li{
+		line-height: 18px;
+		min-width: 133px;
+	}
+	.calcul__foot li:nth-child(2) {
+		min-width: 150px;
+	}
+	.calcul__foot-value {
+		display: block;
+		font-size: 16px;
+		padding: 0;
+	}
+	.calcul .btn {
+		bottom: 10px;
+		right: 10px;
+		width: 198px;
+	}
+
+
+	.step3-block {
+		padding: 42px 0 60px;
+	}
+	.step3-block li {
+		width: 234px;
+	}
+	.step3-block li:nth-child(n+2)::after {
+		left: -60px;
+		width: 120px;
+	}
+	.reviews-block {
+		padding: 46px 0 18px;
+	}
+	.reviews-block__item {
+		float: none;
+		margin: auto;
+	}
+	.reviews-block__item:nth-child(2) {
+		display: none;
+	}
+	.news-block {
+		padding: 48px 0 50px;
+	}
+	.news-block h2 {
+		padding-bottom: 38px;
+	}
+	.news-block__all {
+		top: 64px;
+	}
+	.home .news-block__item:nth-child(1) {
+		margin-left: 50px;
+	}
+	.home .news-block__item:nth-child(3) {
+		display: none;
+	}
+
+	.subscribe {
+		padding: 18px;
+	}
+	.subscribe__title {
+		font-size: 23px;
+		line-height: 28px;
+		padding-bottom: 32px;
+	}
 
 }
 
@@ -107,7 +266,18 @@ body{
 ----------------------------------------*/
 @media only screen and (max-width:479px){
 
-
+.logo {
+	height: 76px;
+	width: 170px;
+}
+.header .logo {
+	margin-left: 10px;
+}
+.menu-mobile-toggle {
+	height: 62px;
+	margin: 6px 0;
+	width: 62px;
+}
 
 
 }

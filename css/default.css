@@ -87,9 +87,9 @@ header, main, nav, section, article, aside, footer {
 }
 textarea.input {
 	resize: none;
-	height: 252px;
+	height: 131px;
 	overflow: hidden;
-	padding: 10px 15px;
+	padding: 8px 10px;
 }
 .frontend ::-moz-placeholder {
 	color: #515253;
@@ -152,12 +152,37 @@ textarea.input {
 	left: auto;
 	background-position: -544px -336px
 }
-.ico--arrow-right {
+.ico--arrow-left,
+.ico--arrow-right,
+.ico--arrow-left-gray,
+.ico--arrow-right-gray {
 	width: 15px;
 	height: 15px;
+	outline:1px solid red;
+	background-position: -104px -106px
+}
+.ico--arrow-right {
+	background-position: -104px -106px
+}
+.ico--arrow-left-gray {
+	background-position: -104px -106px
+}
+.ico--arrow-right-gray {
 	background-position: -104px -106px
 }
 
+.ico__geo {
+	outline:1px solid red;
+	background-position: 0 0
+}
+.ico__tel {
+	outline:1px solid red;
+	background-position: 0 0
+}
+.ico__time {
+	outline:1px solid red;
+	background-position: 0 0
+}
 
 /* btn
 -----------------------------------------------------------------------------*/

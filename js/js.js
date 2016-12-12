@@ -193,6 +193,17 @@ http://htmlpluscss.ru
 
 	$('.btn-alert_up').alertUp();
 
+// mask
+	if($('.mask').length>0){
+
+		$.getScript("/js/jquery.maskedinput.min.js", function(){
+			$('.mask').each(function(){
+				$(this).mask($(this).attr('data-mask'));
+			});
+		});
+
+	}
+
 })(jQuery);
 
 function getScrollBarWidth(){

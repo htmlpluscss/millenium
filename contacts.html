@@ -1,104 +1,34 @@
-<!--#set var="title" value="Contacts" -->
+<!--#set var="title" value="Контакты" -->
 <!--#set var="page" value="contacts" -->
 <!--#include file="_header.shtml"-->
 
-		<main class="main">
+		<main class="main img-cover content-flex-center" data-img="img/contacts.jpg">
 
-			<div class="img-cover img-cover--460" data-img="img/contacts.jpg"></div>
+			<article class="center clr">
 
-			<div class="center clr">
+				<div class="contacts__address pull-left">
 
-				<div class="left-bar pull-left">
-
-<!--#include file="_menu-left.shtml"-->
-
-				</div>
-
-				<div class="right-content right-content--up pull-right">
-
-					<ul class="breadcrumbs clr">
-						<li><a href="/">Home</a></li>
-						<li>contacts</li>
+					<h1 class="h2">Контакты</h1>
+					<ul>
+						<li><i class="ico ico__geo"></i>117246, г.Москва, Дмитриевское шоссе, 157</li>
+						<li><i class="ico ico__tel"></i><a href="tel:88001234567">8 (800) 12-345-67</a></li>
+						<li><i class="ico ico__time"></i>с 8:00 до 21:00 по московскому времени</li>
 					</ul>
 
-					<article class="content-text">
-
-						<h1>For students</h1>
-
-						<h4>University among the top three on the demand for graduates of Russian universitiets among employers in the version of " Expert RA "</h4>
-
-						<p>Indiana University students get it all—the storybook experience of what college should be like, and the endless opportunities that come with it. Top-ranked academics. Awe-inspiring faculty. Dynamic campus life. International culture. Phenomenal music and arts events. The excitement</p>
-
-						<p>IU faculty, students, and alumni aspire to the highest standards of their fields, bringing home prestigious national and international awards: Tonys, Oscars, Nobel Prizes, Pulitzer Prizes, Emmys, Grammys, Olympic medals, Guggenheims, and Fulbrights. You’ll find us on podiums and stages of all kinds—performing, accepting honors, standing up for human rights, and presenting</p>
-
-						<p>Indiana University students get it all—the storybook experience of what college should be like, and the endless opportunities that come with it. Top-ranked academics. Awe-inspiring faculty. Dynamic campus life. International culture.</p>
-
-						<h2>For partners</h2>
-
-						<h4>University among the top three on the demand for graduates of Russian universitiets among employers in the version of " Expert RA "</h4>
-
-						<p>Indiana University students get it all—the storybook experience of what college should be like, and the endless opportunities that come with it. Top-ranked academics. Awe-inspiring faculty. Dynamic campus life. International culture. Phenomenal music and arts events. The excitement</p>
-
-						<p>IU faculty, students, and alumni aspire to the highest standards of their fields, bringing home prestigious national and international awards: Tonys, Oscars, Nobel Prizes, Pulitzer Prizes, Emmys, Grammys, Olympic medals, Guggenheims, and Fulbrights. You’ll find us on podiums and stages of all kinds—performing, accepting honors, standing up for human rights, and presenting</p>
-
-						<p>Indiana University students get it all—the storybook experience of what college should be like, and the endless opportunities that come with it. Top-ranked academics. Awe-inspiring faculty. Dynamic campus life. International culture.</p>
-
-						<h2>For media</h2>
-
-						<h4>University among the top three on the demand for graduates of Russian universitiets among employers in the version of " Expert RA "</h4>
-
-						<p>Indiana University students get it all—the storybook experience of what college should be like, and the endless opportunities that come with it. Top-ranked academics. Awe-inspiring faculty. Dynamic campus life. International culture. Phenomenal music and arts events. The excitement</p>
-
-						<p>IU faculty, students, and alumni aspire to the highest standards of their fields, bringing home prestigious national and international awards: Tonys, Oscars, Nobel Prizes, Pulitzer Prizes, Emmys, Grammys, Olympic medals, Guggenheims, and Fulbrights. You’ll find us on podiums and stages of all kinds—performing, accepting honors, standing up for human rights, and presenting</p>
-
-						<p>Indiana University students get it all—the storybook experience of what college should be like, and the endless opportunities that come with it. Top-ranked academics. Awe-inspiring faculty. Dynamic campus life. International culture.</p>
-
-					</article>
-
 				</div>
 
-			</div>
+				<form class="contacts__form pull-right">
 
-			<aside class="contacts__address center">
+					<h2 class="h4">Форма обратно связи</h2>
 
-				<div class="contacts__address-box">
+					<input class="input" placeholder="Ваше имя">
+					<input class="input mask" placeholder="+ 375 ( __ ) - ___ - __ - __" data-mask="+ 375 ( 99 ) - 999 - 99 - 99">
+					<textarea class="input" placeholder="Сообщение"></textarea>
+					<label class="btn">Связаться с нами<input type="submit"></label>
 
-					<h3>Postal Address:</h3>
-					<p>Gubkin Russian State University of Oil and Gas (National Research University)</p>
-					<p class="contacts__address-placemark">65 Leninsky Prospekt, Moscow, 119991, Russia</p>
+				</form>
 
-				</div>
-
-			</aside>
-
-			<div class="contacts__map" id="map"></div>
-
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB445rXMUL3n-YlwGGavzHK6Qk1Uxsrwdw&amp;signed_in=true"></script>
-			<script>
-
-				function initialize() {
-
-					var mapOptions = {
-						zoom: 17,
-						scrollwheel: false,
-						center: new google.maps.LatLng(55.6925, 37.5525)
-					};
-
-					var map = new google.maps.Map(document.getElementById('map'),
-						mapOptions);
-
-					var marker = new google.maps.Marker({
-						map: map,
-						position: {lat: 55.692051, lng: 37.555395},
-						title: '65 Leninsky Prospekt',
-						icon: 'images/marker.png'
-					});
-
-				}
-
-				google.maps.event.addDomListener(window, 'load', initialize);
-
-			</script>
+			</article>
 
 		</main>
 

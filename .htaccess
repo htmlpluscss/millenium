@@ -13,5 +13,6 @@ text/css \
 text/html \
 text/javascript \
 text/plain \
+image/svg+xml \
 text/xml
 </IfModule>

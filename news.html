@@ -1,47 +1,51 @@
-<!--#set var="title" value="News" -->
+<!--#set var="title" value="Новости" -->
 <!--#set var="page" value="news" -->
 <!--#include file="_header.shtml"-->
 
-		<main class="main main--32 center">
+		<main class="main main--bb">
 
-			<ul class="breadcrumbs clr">
-				<li><a href="/">Home</a></li>
-				<li>All news</li>
-			</ul>
+			<div class="img-cover" data-img="img/news.jpg">
 
-			<div class="clr">
+				<div class="center clr">
 
-				<section class="left__box news__list pull-left">
+					<article class="news__first pull-left">
 
-					<h1 class="h2">News</h1>
+						<h1 class="h2">Почему не стоит боятся МФО?</h1>
+						<p>Большинство клиентов онлайн-кредитования предпочитают получать и погашать займы с помощью банковских карт. </p>
+						<a href="new.html">Читать</a>
 
-<!--#set var="img_item" value="news__1_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
-<!--#set var="img_item" value="news__2_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
-<!--#set var="img_item" value="news__3_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
-<!--#set var="img_item" value="news__4_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
-<!--#set var="img_item" value="news__5_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
-<!--#set var="img_item" value="news__6_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
-<!--#set var="img_item" value="news__7_1-p.jpg" -->
-<!--#include file="_news-item.shtml"-->
+					</article>
 
-				</section>
-
-				<aside class="right-bar right-bar--tp58 pull-right">
-
-<!--#set var="all_news" value="1" -->
-<!--#include file="_news-right.shtml"-->
-
-				</aside>
+				</div>
 
 			</div>
 
-<!--#include file="_pagin.shtml"-->
+			<section class="news__list center clr">
+
+<!--#set var="img_item" value="1" -->
+<!--#include file="_news-item.shtml"-->
+<!--#set var="img_item" value="2" -->
+<!--#include file="_news-item.shtml"-->
+<!--#set var="img_item" value="3" -->
+<!--#include file="_news-item.shtml"-->
+
+			</section>
+
+			<ul class="center pagination">
+				<li class="pagination__item">Назад</li>
+				<li class="pagination__item pagination__item--active">1</li>
+				<li class="pagination__item"><a href="/">2</a></li>
+				<li class="pagination__item"><a href="/">3</a></li>
+				<li class="pagination__item pagination__item--sep"></li>
+				<li class="pagination__item"><a href="/">10</a></li>
+				<li class="pagination__item"><a href="/">Вперед</a></li>
+			</ul>
+
+			<div class="center">
+
+<!--#include file="_subscribe.shtml"-->
+
+			</div>
 
 		</main>
 

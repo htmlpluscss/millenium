@@ -204,6 +204,33 @@ http://htmlpluscss.ru
 
 	}
 
+// faq
+	(function(faq){
+
+		var head = faq.children('.faq__head'),
+			body = faq.children('.faq__body'),
+			nav = $('<div class="faq__box-nav clr notsel">');
+
+		head.on('click',function(){
+			$(this).addClass('faq__head--active').siblings().removeClass('faq__head--active');
+			body.eq($(this).index()).addClass('faq__body--active').siblings().removeClass('faq__body--active');
+		});
+
+		nav.html(head);
+		faq.prepend(nav);
+		head.first().trigger('click');
+
+	})($('.faq__list'));
+
+// accordion
+	(function(accordion){
+
+		accordion.find('.accordion__head').on('click',function(event){
+			$(this).parent().toggleClass('accordion__item--active').siblings('.accordion__item').removeClass('accordion__item--active');
+		});
+
+	}($('.accordion')));
+
 })(jQuery);
 
 function getScrollBarWidth(){

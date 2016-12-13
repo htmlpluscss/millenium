@@ -1,6 +1,6 @@
 				<form class="subscribe">
 
-					<h3 class="subscribe__title h3">Подписывайтесь на последние новости</h3>
+					<h3 class="subscribe__title h4">Подписывайтесь на последние новости</h3>
 					<input placeholder="Укажите Ваш e-mail" class="subscribe__input input">
 					<label class="subscribe__btn btn">Подписаться<input type="submit"></label>
 

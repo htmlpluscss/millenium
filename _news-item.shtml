@@ -2,7 +2,7 @@
 
 					<a href="new.html" class="news__link">
 						<time class="news__date" datetime="2016-09-28"><span>28</span> Сен</time>
-						<img src="img/news__img-<!--#echo var=img_item -->__1" alt="">
+						<img src="img/news__img-<!--#echo var=img_item -->__1.jpg" alt="">
 						<h3 class="news__text">Что такое МФО и почему их не стоит бояться</h3>
 					</a>
 
@@ -12,7 +12,7 @@
 
 					<a href="new.html" class="news__link">
 						<time class="news__date" datetime="2016-09-28"><span>28</span> Сен</time>
-						<img src="img/news__img-<!--#echo var=img_item -->__2" alt="">
+						<img src="img/news__img-<!--#echo var=img_item -->__2.jpg" alt="">
 						<h3 class="news__text">Займы для населенеия по всей России во всех офисах Миллениум </h3>
 					</a>
 
@@ -22,7 +22,7 @@
 
 					<a href="new.html" class="news__link">
 						<time class="news__date" datetime="2016-09-28"><span>28</span> Сен</time>
-						<img src="img/news__img-<!--#echo var=img_item -->__3" alt="">
+						<img src="img/news__img-<!--#echo var=img_item -->__3.jpg" alt="">
 						<h3 class="news__text">Начало работ компании Миллениум</h3>
 					</a>
 

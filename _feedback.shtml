@@ -1,0 +1,11 @@
+			<aside class="img-cover img-cover--red" data-img="img/feedback.jpg">
+
+				<div class="center">
+
+					<h3 class="h2">Остались еще вопросы?</h3>
+					<p>Вы можете заказать обратный звонок и мы перезвоним Вам</p>
+					<a class="btn btn--white btn--big btn--radius btn-alert_up" data-alert-up="callback">Заказать звонок</a>
+
+				</div>
+
+			</aside>

@@ -93,7 +93,7 @@ a.phone-and-callback__link {
 /* home-slider
 -----------------------------------------------------------------------------*/
 .calcul-home {
-	padding: 115px 0 60px;
+	padding: 114px 0 30px;
 	color: #fff;
 }
 .calcul-home__p{
@@ -104,29 +104,29 @@ a.phone-and-callback__link {
 }
 .calcul {
 	position: relative;
-	margin-top: 46px;
+	max-width: 650px;
+	margin: 60px auto;
 }
 .calcul__bg {
-	padding: 20px;
+	padding: 10px 10px 4px;
 	background: rgba(26,29,31,.8);
 }
 .calcul__box {
-	width: 440px;
+	width: 300px;
 }
 .calcul .btn{
-	bottom: 16px;
+	bottom: 10px;
 	height: 50px;
 	line-height: 50px;
 	position: absolute;
-	right: 16px;
-	width: 224px;
+	right: 10px;
+	width: 198px;
 }
 .calcul__h3 {
 	color: #fff;
 	font-size: 16px;
-	line-height: 33px;
+	line-height: 36px;
 	font-weight: 400;
-	padding-top: 4px;
 }
 .calcul__input-box {
 	width: 107px;
@@ -134,7 +134,6 @@ a.phone-and-callback__link {
 	line-height: 33px;
 	color: #fff;
 	font-size: 16px;
-	margin-top: 4px;
 	position: relative;
 	background: rgba(255,255,255,.2);
 }
@@ -154,21 +153,21 @@ a.phone-and-callback__link {
 	position: absolute;
 }
 .calcul__slider-box {
-	height: 28px;
+	height: 24px;
 	position: relative;
 	clear: both;
-	padding-top: 17px;
+	padding-top: 14px;
 }
 .calcul__slider {
 	height: 4px;
-	margin: 0 50px;
+	margin: 0 48px;
 	position: relative;
 }
 .calcul__slider:before {
 	position: absolute;
 	top: 0;
-	left: -50px;
-	right: -50px;
+	left: -48px;
+	right: -48px;
 	bottom: 0;
 	content: '';
 	background: #fff;
@@ -182,7 +181,7 @@ a.phone-and-callback__link {
 .ui-slider-range:before {
 	position: absolute;
 	top: 0;
-	left: -50px;
+	left: -48px;
 	bottom: 0;
 	right: -10px;
 	content: '';
@@ -190,15 +189,15 @@ a.phone-and-callback__link {
 }
 .ui-slider-handle {
 	position: absolute;
-	width: 102px;
-	height: 42px;
-	top: -20px;
+	width: 97px;
+	height: 37px;
+	top: -17px;
 	z-index: 1;
 	font-size: 16px;
-	line-height: 42px;
+	line-height: 37px;
 	color: #000;
 	text-align: center;
-	margin-left: -51px;
+	margin-left: -49px;
 	background: #fff;
 	border-radius: 21px;
 	box-shadow: 0 0 1px rgba(0,0,0.2);
@@ -209,7 +208,7 @@ a.phone-and-callback__link {
 	position: absolute;
 	width: 16px;
 	height: 20px;
-	top: 12px;
+	top: 9px;
 	left: 8px;
 	content: '';
 	background: url(/images/sprite.svg) -155px -105px
@@ -224,22 +223,26 @@ a.phone-and-callback__link {
 	line-height: 22px;
 }
 .calcul__foot {
-	padding: 30px;
+	min-height: 70px;
+	padding: 16px 20px;
 	background: #fff
 }
 .calcul__foot li{
 	float: left;
 	color: #515253;
 	font-size: 13px;
-	line-height: 20px;
-	min-width: 220px;
-	padding-right: 10px;
+	line-height: 16px;
+	min-width: 150px;
+}
+.calcul__foot li:first-child{
+	min-width: 132px;
 }
 .calcul__foot-value {
 	color: #000;
+	display: block;
 	font-weight: 700;
 	font-size: 16px;
-	padding: 0 4px;
+	line-height: 18px;
 }
 
 
@@ -303,7 +306,7 @@ a.phone-and-callback__link {
 	width: 460px;
 	background: #fff;
 	position: relative;
-	padding: 34px 30px 34px 138px;
+	padding: 34px 30px 42px 138px;
 }
 .reviews-block__item img{
 	position: absolute;
@@ -449,7 +452,7 @@ a.phone-and-callback__link {
 .contacts__address {
 	width: 316px;
 	color: #fff;
-	margin: 92px 54px;
+	margin: 92px 225px 40px 0;
 }
 .contacts__address .h2{
 	padding: 4px 0
@@ -467,7 +470,6 @@ a.phone-and-callback__link {
 	top: 10px;
 }
 .contacts__form {
-	margin-right: 108px;
 	padding: 18px;
 	width: 316px;
 	background: #fff
@@ -567,8 +569,8 @@ a.phone-and-callback__link {
 .nav-page:before {
 	position: absolute;
 	top: 0;
-	left: -10px;
-	right: -10px;
+	left: 0;
+	right: 0;
 	bottom: -10px;
 	content: '';
 	background: #fff;
@@ -592,22 +594,26 @@ a.phone-and-callback__link {
 
 .pagination {
 	text-align: center;
-	padding: 30px;
+	padding: 45px 0;
 }
 .pagination__item {
 	display: inline-block;
 	vertical-align: top;
-	padding: 6px 35px;
+	text-align: center;
 	font-size: 14px;
 	font-weight: 300;
-	line-height: 22px;
+	line-height: 29px;
 	color: #000;
-	height: 33px;
+	margin: 0 9px;
 }
 .pagination__item--active {
-	outline:1px solid red;
+	color: #fff;
+	background: #bc1212;
+	height: 29px;
+	width: 31px;
 }
 .pagination__item--sep:before {
+	color: #bc1212;
 	content: '...'
 }
 
@@ -643,16 +649,23 @@ a.phone-and-callback__link {
 	border-color: transparent #fff;
 }
 
-.news__list {
-	margin-top: -22px;
-	padding: 22px;
+.news__list .h2 {
+	padding: 55px 0 36px;
+	text-align: center;
+}
+.news__box {
+	padding: 20px 20px 0;
 	background: #f8f8f8;
 }
 .news__item {
 	float: left;
 	width: 286px;
 	background: #fff;
-	padding-bottom: 12px;
+	margin-bottom: 20px;
+}
+.news__link {
+	display: block;
+	padding-bottom: 6px;
 	border-bottom: 2px solid #bc1212;
 }
 .news__item img{
@@ -664,7 +677,7 @@ a.phone-and-callback__link {
 .news__text {
 	overflow: hidden;
 	height: 88px;
-	padding: 0 12px;
+	padding: 0 20px;
 	color: #000;
 	font-size: 16px;
 	font-weight: 500;
@@ -680,38 +693,241 @@ a.phone-and-callback__link {
 	top: 20px;
 	left: 15px;
 	font-size: 10px;
-	line-height: 22px;
+	z-index: 1;
+	line-height: 20px;
 	background: #bc1212
 }
 .news__date span{
 	display: block;
-	padding-top: 2px;
+	padding-top: 5px;
 	font-size: 14px;
+	height: 18px;
 }
 .news__item:nth-child(3n+1) {
 	clear: both;
 }
 .news__item:nth-child(3n+2) {
-	margin-left: 22px;
+	margin-left: 20px;
 }
 .news__item:nth-child(3n+3) {
 	float: right;
 }
-
-/* people
------------------------------------------------------------------------------*/
-/* article
------------------------------------------------------------------------------*/
-
-
-.news {
-	background: url(1.jpg) center 0;
+.news .subscribe {
+	margin-bottom: 58px;
+	padding: 46px 0 54px;
+	background: #efefef
 }
+.news .subscribe__input {
+	border: 0
+}
+
+/* faq
+-----------------------------------------------------------------------------*/
+.faq__list {
+	padding: 22px 78px 80px;
+}
+.faq__head {
+	border-radius: 19px;
+	cursor: pointer;
+	float: left;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 38px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.faq__head--active {
+	background: #bc1212;
+	color: #fff;
+	padding: 0 26px;
+}
+.faq__box-nav {
+	padding: 30px 0;
+}
+.faq__body {
+	display: none;
+}
+.faq__body--active {
+	display: block;
+}
+.faq__body .h2 {
+	padding: 15px 0;
+}
+
+/* accordion
+-----------------------------------------------------------------------------*/
+.accordion__item {
+	margin: 10px 0;
+	position: relative;
+}
+.accordion__head {
+	color: #515253;
+	cursor: pointer;
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 16px 40px 30px 0;
+}
+.accordion__body {
+	display: none;
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: 300;
+	color: #000;
+}
+.accordion__item:before {
+	position: absolute;
+	width: 18px;
+	height: 14px;
+	top: 22px;
+	right: 0;
+	content: '';
+	background: url(/images/sprite.svg) -720px -111px;
+}
+.accordion__item--active {
+	padding-bottom: 26px;
+}
+.accordion__item--active .accordion__head {
+	padding-bottom: 20px;
+	border-bottom-color: transparent;
+}
+.accordion__item--active:before {
+	background-position: -662px -109px
+}
+.accordion__item--active .accordion__body {
+	display: block;
+}
+
+/* about
+-----------------------------------------------------------------------------*/
+.about__text {
+	padding: 30px 0 68px;
+}
+.about__text .h2 {
+	text-align: center;
+	padding: 26px;
+}
+.about__text p {
+	float: left;
+	width: 50%;
+	color: #000;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 25px;
+}
+.about__text p:last-child {
+	position: relative;
+	left: 20px;
+	padding-right: 10px;
+}
+.about .step4-block {
+	margin-bottom: 57px;
+}
+
+.step4-block {
+	padding: 68px 0 80px;
+	background: #f8f8f8;
+	text-align: center;
+}
+.step4-block li{
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 17px;
+	color: #515253
+}
+.step4-block b{
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #1a1d1f;
+	padding: 16px 0 10px;
+}
+.step4-block li:before{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: auto;
+	content: '';
+	background: url(/images/sprite.svg);
+}
+.step4-block li:nth-child(1):before{
+	background-position: -17px -403px
+}
+.step4-block li:nth-child(2):before{
+	background-position: -151px -400px
+}
+.step4-block li:nth-child(3):before{
+	background-position: -283px -402px
+}
+.step4-block li:nth-child(4):before{
+	background-position: -408px -400px
+}
+.step4-block li:nth-child(n+2):after{
+	position: absolute;
+	width: 90px;
+	height: 2px;
+	top: 48px;
+	left: -50px;
+	content: '';
+	background: #1a1d1f;
+}
+
+.doc-list {
+	padding: 34px 0 90px;
+}
+.doc-list__item {
+	border-bottom: 1px solid #e1e1e1;
+}
+.doc-list__item:first-child {
+	border-top: 1px solid #e1e1e1;
+}
+.doc-list__link {
+	max-width: 630px;
+	display: table-cell;
+	padding: 15px 59px 17px;
+	font-size: 14px;
+	height: 80px;
+	vertical-align: middle;
+	line-height: 24px;
+}
+.doc-list__link a{
+	color: #515253;
+}
+.doc-list__link a:before {
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	top: 18px;
+	left: -2px;
+	content: '';
+	background: url(/images/sprite.svg);
+}
+.doc-list__link a[href$=pdf]:before {
+	background-position: -22px -543px
+}
+.doc-list__size {
+	color: #a8a8a8
+}
+.doc-list__btn {
+	height: 38px;
+	line-height: 38px;
+	position: absolute;
+	right: 0;
+	top: 21px;
+	width: 140px;
+}
+
 
 /* footer
 -----------------------------------------------------------------------------*/
 .footer {
-	padding-top: 46px;
+	padding-top: 45px;
 }
 .footer__logo {
 	height: 54px;

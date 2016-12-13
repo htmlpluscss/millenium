@@ -158,30 +158,32 @@ textarea.input {
 .ico--arrow-right-gray {
 	width: 15px;
 	height: 15px;
-	outline:1px solid red;
 	background-position: -104px -106px
 }
-.ico--arrow-right {
-	background-position: -104px -106px
+.ico--arrow-left,
+.ico--arrow-right-gray {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.ico--arrow-left,
+.ico--arrow-left-gray {
+	top: -1px;
 }
 .ico--arrow-left-gray {
-	background-position: -104px -106px
-}
-.ico--arrow-right-gray {
-	background-position: -104px -106px
+	background-position: -610px -106px
 }
 
 .ico__geo {
-	outline:1px solid red;
-	background-position: 0 0
+	background-position: -445px -105px
 }
 .ico__tel {
-	outline:1px solid red;
-	background-position: 0 0
+	background-position: -401px -105px
 }
 .ico__time {
-	outline:1px solid red;
-	background-position: 0 0
+	background-position: -490px -105px
 }
 
 /* btn
@@ -425,12 +427,17 @@ hr {
 .img-cover--400 {
 	height: 400px;
 }
+.img-cover--325 {
+	height: 325px;
+}
 .img-cover--text {
 	color: #fff;
 	text-align: center;
 }
+.img-cover--text .h1{
+	font-size: 38px;
+}
 .img-cover--text .h2{
-	color: #fff;
 	padding-bottom: 22px;
 }
 .img-cover--text img{
@@ -439,11 +446,40 @@ hr {
 .img-cover--text p {
 	font-size: 14px;
 	line-height: 24px;
-	padding: 20px 0;
+	padding: 20px 0 0;
+}
+p.img-cover--text__p {
+	font-size: 16px;
+	line-height: 19px;
+	padding: 10px 140px 6px;
+	font-weight: 300;
 }
 .img-cover--text p a{
 	color: inherit;
 	text-decoration: underline;
+}
+
+.img-cover--red {
+	padding: 64px 0 58px;
+}
+.img-cover--red .btn{
+	color: #bc1212;
+	height: 50px;
+	margin: 6px;
+	line-height: 50px;
+}
+.img-cover--red p{
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+	padding: 8px 0 26px;
+}
+.img-cover--red .center {
+	background: rgba(188,18,18,.76);
+	color: #fff;
+	max-width: 620px;
+	text-align: center;
+	padding: 50px;
 }
 
 /* slider

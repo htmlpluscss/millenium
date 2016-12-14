@@ -3,10 +3,10 @@
 			<div class="alert_up__window alert_up__window--callback">
 
 				<form class="alert_up__box">
-					<p class="h2">Обратный звонок</p>
+					<p class="h4">Обратный звонок</p>
 					<input class="input" placeholder="Ваше имя">
-					<input class="input" placeholder="Ваш e-mail" type="email">
-					<input class="input" placeholder="Телефон" type="tel">
+					<input class="input mask" placeholder="+ 375 ( __ ) - ___ - __ - __" data-mask="+ 375 ( 99 ) - 999 - 99 - 99" type="tel">
+					<textarea class="input" placeholder="Сообщение"></textarea>
 					<label class="btn">Отправить<input type="submit"></label>
 					<a class="alert_up__close ico ico--close"></a>
 				</form>

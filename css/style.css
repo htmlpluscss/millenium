@@ -493,7 +493,6 @@ a.phone-and-callback__link {
 .content-flex-center {
 	padding: 108px 0;
 	display: flex;
-	justify-content: center;
 	align-content: center;
 }
 .content-flex-center .center{

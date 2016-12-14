@@ -147,10 +147,12 @@ textarea.input {
 	background-position: -55px -106px
 }
 .ico--close {
-	top: -26px;
-	right: -26px;
+	top: -30px;
+	right: -30px;
 	left: auto;
-	background-position: -544px -336px
+	border-radius: 50%;
+	background-color: #fff;
+	background-position: -85px -556px
 }
 .ico--arrow-left,
 .ico--arrow-right,
@@ -370,27 +372,41 @@ hr {
 	height: 100%;
 	overflow-y: auto;
 	background-color: rgba(0,0,0,.6);
+	background: #cbcbcb;
 }
 .alert_up--hide {
 	height: 0;
 	overflow: hidden;
 }
 .alert_up__window {
-	width: 728px;
+	width: 316px;
 	position:absolute;
 	top: -9999px;
 	left: 0;
 	margin: 30px auto;
 	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.06);
 }
 .alert_up__window--active {
 	position: static;
 }
 .alert_up__box {
 	position: relative;
-	padding: 24px 42px;
+	padding: 18px;
 }
-
+.alert_up .h4 {
+	text-align: center;
+	padding: 8px;
+}
+.alert_up .input {
+	margin: 18px 0;
+}
+.alert_up .btn {
+	display: block;
+	margin-top: 22px;
+	font-size: 16px;
+	font-weight: 500;
+}
 
 .scroolbarwidth {
 	width:100px;

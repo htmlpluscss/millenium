@@ -579,6 +579,9 @@ p.img-cover--text__p {
 	display: none;
 }
 
-
+.ico--close {
+	right: 0;
+	top: 0;
+}
 
 }
